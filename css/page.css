@@ -1,3 +1,42 @@
+/* Animation and control class, from left to center */
+@keyframes flip-left-center {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0px);
+    }   
+}
+
+/* Animation and control class, from center to right */
+@keyframes flip-center-right {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(100vw);
+    }   
+}
+
+/* Animation and control class, from right to center */
+@keyframes flip-center-right {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(0px);
+    }   
+}
+
+/* Animation and control class, from center to left */
+@keyframes flip-center-right {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(100vw);
+    }   
+}
 
 html, body {
     width: 100vw;
