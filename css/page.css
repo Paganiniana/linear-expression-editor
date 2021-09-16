@@ -46,7 +46,7 @@
 /* Animation and control class, from center to left */
 .page-flip-center-left {
     animation: flip-center-left 1s;
-    transform: translateX(0px);
+    transform: translateX(-100vw);
 }
 
 @keyframes flip-center-left {
