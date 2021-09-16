@@ -71,7 +71,14 @@ html, body {
     overflow: hidden;
 }
 
+.page-container {
+    /* Set the initial index so the child pages behave themselves */
+    position:relative;
+    z-index:0;
+}
+
 .page {
+    background-color: white;
     width: calc(100vw - 2em);
     height: calc(100vh - 2em);
     padding: 1em;
@@ -83,6 +90,24 @@ html, body {
     right:0;
     bottom:0;
     top:0;
+}
+
+/* initial z-indexes for pages */
+
+.page#page1 {
+    z-index:4;
+}
+
+.page#page2 {
+    z-index:3;
+}
+
+.page#page3 {
+    z-index:2;
+}
+
+.page#page4 {
+    z-index:1;
 }
 
 
