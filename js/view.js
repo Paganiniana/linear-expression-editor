@@ -17,7 +17,14 @@ var View = {
             // no pages before this one, cannot turn page
             return
         } else {
-            // TODO: handle page list objects and update index
+            // flip current index to the right
+            this.page_list[this.page_index].classList.remove(...PAGE_CLASSES)
+            this.page_list[this.page_index].classList.add(CLASS_PAGE_TO_RIGHT)
+            // update index
+            this.page_index-- 
+            // flip next index to center
+            this.page_list[this.page_index].classList.remove(...PAGE_CLASSES)
+            this.page_list[this.page_index].classList.add(CLASS_PAGE_FROM_LEFT)
         }
     },
 
