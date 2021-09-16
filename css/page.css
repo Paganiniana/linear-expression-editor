@@ -91,5 +91,16 @@ html, body {
 
 .page .page-control {
     position: absolute;
+    width: calc(100vw - 2em);
+    height: fit-content;
     bottom: 1em;
+    z-index: 1;
+}
+
+.page .page-control .button-back {
+
+}
+
+.page .page-control .button-forward {
+    
 }
