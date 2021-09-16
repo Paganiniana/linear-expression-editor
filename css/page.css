@@ -95,12 +95,6 @@ html, body {
     height: fit-content;
     bottom: 1em;
     z-index: 1;
-}
-
-.page .page-control .button-back {
-
-}
-
-.page .page-control .button-forward {
-    
+    display: flex;
+    justify-content: space-between;
 }
