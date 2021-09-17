@@ -13,9 +13,14 @@
     <div class="page-container">
         <div class="page" id="page1">
             <h1>Hello!</h1>
-            <p>A line can be expressed with the formula <i>y = mx + b</i>.</p>
-            <p>Very small changes to <i>m</i> and <i>b</i> make a big difference in the kind of line we wind up with!</p>
+            <div class="page-text">
+                <p>A line can be expressed with the formula <i>y = mx + b</i>.</p>
+            <p>In this case we would say that <i>m</i> is the slope of the line and <i>b</i> is where it crosses
+            the Y-Axis. So, if we have a very big number for <i>m</i>, then the slope of our line will be VERY steep! 
+            On the other hand, if our slope is very small (as close to 0 as you can get!) it will be very shallow.</p>
+            <p>The same thing goes for <i>b</i>! If it were a very large number, then our whole line would move up and up and up!</p>
             <p>Scroll on to see!</p>
+            </div>
             <div class="page-control">
                 <div></div>
                 <button class="page-control-button button-forward">Next</button>
@@ -23,10 +28,12 @@
         </div>
         <div class="page page-flip-center-right" id="page2">
             <h1>Slope</h1>
+            <div class="page-text">
+                <p>Let's look and see what happens when we change the slope by substituting values for <i>m</i>!</p>
+            </div>
             <div class="canvas-container">
                 <canvas id = "slopeCanvas"></canvas>
             </div>
-            <p>Let's look and see what happens when we change the slope by substituting values for <i>m</i>!</p>
             <div class = "demo-formula"><i>y = <span id="slopeValue">1</span>x + 0</i></div>
             <div class="canvas-controls">
                 <input type="range" min="0" max="100" value="10" name="slope-control" id="slopeControl">
@@ -38,7 +45,9 @@
         </div>
         <div class="page page-flip-center-right" id="page3">
             <h1>Y-Intercept</h1>
-            <p>This is the page where we would create another canvas where the user can change the y-intercept.</p>
+            <div class="page-text">
+                <p>This is the page where we would create another canvas where the user can change the y-intercept.</p>
+            </div>
             <div class="canvas-container">
                 <canvas id="intCanvas"></canvas>
             </div>
@@ -54,7 +63,9 @@
         </div>
         <div class="page page-flip-center-right" id="page4">
             <h1>Combined!</h1>
-            <p>Now let's look and see what happens when we change <i>m</i> and <i>b</i>!</p>
+            <div class="page-text">
+                <p>Now let's look and see what happens when we change <i>m</i> and <i>b</i>!</p>
+            </div>
             <div class="canvas-container">
                 <canvas id="comboCanvas"></canvas>
             </div>
