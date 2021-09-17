@@ -66,6 +66,8 @@ class Painter {
             let grid_y_end = this.getGridY(line.getY(i + 1))
             // console.log("start", grid_x_start, grid_y_start)
             // console.log("end", grid_x_end, grid_y_end)
+            this.ctx.lineWidth = 5;
+            this.ctx.strokeStyle = 'rgba(0, 0, 0, 1)'
             this.ctx.beginPath()
             this.ctx.moveTo(grid_x_start,grid_y_start)
             this.ctx.lineTo(grid_x_end, grid_y_end)
@@ -99,6 +101,7 @@ class Painter {
         console.log('Printing x lines')
         let lim = this.canvas.height
         for (let i = 0; i <(lim / this.scale); i += 1) {
+            this.ctx.lineWidth = 1
             this.ctx.strokeStyle = 'rgba(100, 100, 150, 0.5)'
             this.ctx.beginPath()
             let start_x = this.getGridX(0)

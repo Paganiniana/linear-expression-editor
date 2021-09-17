@@ -7,12 +7,12 @@
     <title>Linear Formula Experience</title>
     <link rel="stylesheet" href="./css/page.css">
     <link rel="stylesheet" href="./css/painter-styles.css">
+    <link rel="stylesheet" href="./css/content-specific-style.css">
 </head>
 <body>
     <div class="page-container">
         <div class="page" id="page1">
-            <h1>Page 1</h1>
-            <h1>Introduction!</h1>
+            <h1>Hello!</h1>
             <p>A line can be expressed with the formula <i>y = mx + b</i>.</p>
             <p>Very small changes to <i>m</i> and <i>b</i> make a big difference in the kind of line we wind up with!</p>
             <p>Scroll on to see!</p>
@@ -22,13 +22,13 @@
             </div>
         </div>
         <div class="page page-flip-center-right" id="page2">
-            <h1>Page 2</h1>
+            <h1>Slope</h1>
             <div class="canvas-container">
                 <canvas id = "slopeCanvas"></canvas>
             </div>
             <p>Let's look and see what happens when we change the slope by substituting values for <i>m</i>!</p>
+            <div class = "demo-formula"><i>y = <span id="slopeValue">1</span>x + 0</i></div>
             <div class="canvas-controls">
-                <div><i>m</i> = <span id="slopeValue">1</span></div>
                 <input type="range" min="0" max="100" value="10" name="slope-control" id="slopeControl">
             </div>
             <div class="page-control">
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="page page-flip-center-right" id="page3">
-            <h1>Page 3</h1>
+            <h1>Y-Intercept</h1>
             <p>This is the page where we would create another canvas where the user can change the y-intercept.</p>
             <div class="page-control">
                 <button class="page-control-button button-back">Back</button>

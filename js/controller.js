@@ -10,7 +10,7 @@ var Controller = {
         this.initPages()
         this.initNavButtons()
         // TEMP
-        this.initTestPainter()
+        this.initSlopePainter()
     },
 
     initPages: function() {
@@ -43,19 +43,19 @@ var Controller = {
 
     // Painters
 
-    initTestPainter() {
+    initSlopePainter() {
         let canvas = document.getElementById('slopeCanvas')
         let test_painter = new Painter(canvas)
         console.log("Finihsed initializing painter")
-        let l = new Line(1, 0)
-        test_painter.paintLine(l)
+        Model.simple_slope = new Line(1, 0)
+        test_painter.paintLine(Model.simple_slope)
         console.log(test_painter)
 
         // listen for changes on "slopeControl"
         document.getElementById('slopeControl').addEventListener('input', (e) => {
             let slope = Number(e.target.value)  / this.slope_input_ratio
-            l.setSlope(slope)
-            test_painter.paintLine(l)
+            Model.simple_slope.setSlope(slope)
+            test_painter.paintLine(Model.simple_slope)
             // update the view with this same value
             View.updateSlopeRange(slope)
         })
