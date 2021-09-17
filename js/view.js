@@ -43,5 +43,9 @@ var View = {
             this.page_list[this.page_index].classList.add(CLASS_PAGE_FROM_RIGHT)
 
         }
+    },
+
+    updateSlopeRange(val) {
+        document.getElementById('slopeValue').innerHTML = val
     }
 }
