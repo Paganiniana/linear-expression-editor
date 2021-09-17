@@ -51,5 +51,12 @@ var View = {
 
     updateIntRange(val) {
         document.getElementById('intValue').innerHTML = val
-    }
+    },
+
+    updateComboSlope(val) {
+        document.getElementById('comboSlopeValue').innerHTML = val
+    },
+    updateComboInt(val) {
+        document.getElementById('comboIntValue').innerHTML = val
+    },
 }

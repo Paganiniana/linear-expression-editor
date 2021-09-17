@@ -53,9 +53,24 @@
             </div>
         </div>
         <div class="page page-flip-center-right" id="page4">
-            <h1>Page 4</h1>
-            <p>this is the page where we would bring it all together and let them change BOTH the y-intercept and the slope.</p>
-            <p>Page 5 is optional, but could include some useful conclusion.</p>
+            <h1>Combined!</h1>
+            <p>Now let's look and see what happens when we change <i>m</i> and <i>b</i>!</p>
+            <div class="canvas-container">
+                <canvas id="comboCanvas"></canvas>
+            </div>
+            <div class = "demo-formula"><i>y = <span id ="comboSlopeValue">1</span> x + <span id="comboIntValue">0</span></i></div>
+            <div class="canvas-controls">
+                <label>
+                    Y-Intercept
+                    <input type="range" min="0" max="100" value="0" name="slope-control" id="comboControlInt">
+                </label>
+            </div>
+            <div class="canvas-controls">
+                <label>
+                    Slope
+                    <input type="range" min="0" max="100" value="0" name="slope-control" id="comboControlSlope">
+                </label>
+            </div>
             <div class="page-control">
                 <button class="page-control-button button-back">Back</button>
             </div>

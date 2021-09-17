@@ -13,6 +13,7 @@ var Controller = {
         // initialize canvases
         this.initSlopePainter()
         this.initSimpleIntPainter()
+        this.initComboPainter()
     },
 
     initPages: function() {
@@ -50,11 +51,11 @@ var Controller = {
         let test_painter = new Painter(canvas)
         Model.simple_slope = new Line(1, 0)
         test_painter.paintLine(Model.simple_slope)
-        console.log(test_painter)
 
         // listen for changes on "slopeControl"
         document.getElementById('slopeControl').addEventListener('input', (e) => {
             let slope = Number(e.target.value)  / this.slope_input_ratio
+            // update the model
             Model.simple_slope.setSlope(slope)
             test_painter.paintLine(Model.simple_slope)
             // update the view with this same value
@@ -67,15 +68,42 @@ var Controller = {
         let test_painter = new Painter(canvas)
         Model.simple_y_int = new Line(1, 0)
         test_painter.paintLine(Model.simple_y_int)
-        console.log(test_painter)
 
-        // listen for changes on "slopeControl"
+        // listen for changes on "intControl"
         document.getElementById('intControl').addEventListener('input', (e) => {
             let y_int = Number(e.target.value)  / this.y_int_input_ratio
+            // update the model
             Model.simple_y_int.setIntercept(y_int)
             test_painter.paintLine(Model.simple_y_int)
             // update the view with this same value
             View.updateIntRange(y_int)
+        })
+    },
+
+    initComboPainter() {
+        let canvas = document.getElementById('comboCanvas')
+        let test_painter = new Painter(canvas)
+        // initialize the line
+        Model.combo_y_int = new Line(1, 0)
+        test_painter.paintLine(Model.combo_y_int)
+        // set listener on combo slope-control
+        document.getElementById('comboControlSlope').addEventListener('input', (e) => {
+            let slope = Number(e.target.value)  / this.slope_input_ratio
+            // update the model
+            Model.combo_y_int.setSlope(slope)
+            test_painter.paintLine(Model.combo_y_int)
+            // update the view with this same value
+            View.updateComboSlope(slope)
+        })
+
+        // set listener on combo intercept control
+        document.getElementById('comboControlInt').addEventListener('input', (e) => {
+            let y_int = Number(e.target.value)  / this.y_int_input_ratio
+            // update the model
+            Model.combo_y_int.setIntercept(y_int)
+            test_painter.paintLine(Model.combo_y_int)
+            // update the view with this same value
+            View.updateComboInt(y_int)
         })
     }
 }
