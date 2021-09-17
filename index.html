@@ -14,6 +14,15 @@
             <h1>Page 1</h1>
             <h1>Introduction!</h1>
             <p>A line can be expressed with the formula <i>y = mx + b</i>.</p>
+            <p>Very small changes to <i>m</i> and <i>b</i> make a big difference in the kind of line we wind up with!</p>
+            <p>Scroll on to see!</p>
+            <div class="page-control">
+                <div></div>
+                <button class="page-control-button button-forward">Next</button>
+            </div>
+        </div>
+        <div class="page page-flip-center-right" id="page2">
+            <h1>Page 2</h1>
             <div class="canvas-container">
                 <canvas id = "slopeCanvas"></canvas>
             </div>
@@ -23,19 +32,13 @@
                 <input type="range" min="1" max="10" value="1" name="slope-control" id="slopeControl">
             </div>
             <div class="page-control">
-                <div></div>
-                <button class="page-control-button button-forward">Next</button>
-            </div>
-        </div>
-        <div class="page page-flip-center-right" id="page2">
-            <h1>Page 2</h1>
-            <div class="page-control">
                 <button class="page-control-button button-back">Back</button>
                 <button class="page-control-button button-forward">Next</button>
             </div>
         </div>
         <div class="page page-flip-center-right" id="page3">
             <h1>Page 3</h1>
+            <p>This is the page where we would create another canvas where the user can change the y-intercept.</p>
             <div class="page-control">
                 <button class="page-control-button button-back">Back</button>
                 <button class="page-control-button button-forward">Next</button>
@@ -43,9 +46,10 @@
         </div>
         <div class="page page-flip-center-right" id="page4">
             <h1>Page 4</h1>
+            <p>this is the page where we would bring it all together and let them change BOTH the y-intercept and the slope.</p>
+            <p>Page 5 is optional, but could include some useful conclusion.</p>
             <div class="page-control">
                 <button class="page-control-button button-back">Back</button>
-                <button class="page-control-button button-forward">Next</button>
             </div>
         </div>
     </div>
