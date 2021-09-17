@@ -1,3 +1,7 @@
+/**
+ * @argument slope (number) requires the slope of the line as a first argument
+ * @argument intercept (number) requires the y-intercept of the line as a second argument
+ */
 class Line {
     constructor(slope, intercept) {
         // expects slope and intercept as numbers

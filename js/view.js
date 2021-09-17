@@ -47,5 +47,9 @@ var View = {
 
     updateSlopeRange(val) {
         document.getElementById('slopeValue').innerHTML = val
+    },
+
+    updateIntRange(val) {
+        document.getElementById('intValue').innerHTML = val
     }
 }

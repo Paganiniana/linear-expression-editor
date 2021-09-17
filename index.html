@@ -39,6 +39,14 @@
         <div class="page page-flip-center-right" id="page3">
             <h1>Y-Intercept</h1>
             <p>This is the page where we would create another canvas where the user can change the y-intercept.</p>
+            <div class="canvas-container">
+                <canvas id="intCanvas"></canvas>
+            </div>
+            <p>Now let's look and see what happens when we change the slope by substituting values for <i>b</i>!</p>
+            <div class = "demo-formula"><i>y = x + <span id="intValue">0</span></i></div>
+            <div class="canvas-controls">
+                <input type="range" min="0" max="100" value="0" name="slope-control" id="intControl">
+            </div>
             <div class="page-control">
                 <button class="page-control-button button-back">Back</button>
                 <button class="page-control-button button-forward">Next</button>

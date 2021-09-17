@@ -1,6 +1,7 @@
 var Controller = {
     // constants
     slope_input_ratio: 10,
+    y_int_input_ratio: 10,
 
     /* METHODS */
 
@@ -9,8 +10,9 @@ var Controller = {
         // load pages into the view
         this.initPages()
         this.initNavButtons()
-        // TEMP
+        // initialize canvases
         this.initSlopePainter()
+        this.initSimpleIntPainter()
     },
 
     initPages: function() {
@@ -46,7 +48,6 @@ var Controller = {
     initSlopePainter() {
         let canvas = document.getElementById('slopeCanvas')
         let test_painter = new Painter(canvas)
-        console.log("Finihsed initializing painter")
         Model.simple_slope = new Line(1, 0)
         test_painter.paintLine(Model.simple_slope)
         console.log(test_painter)
@@ -58,6 +59,23 @@ var Controller = {
             test_painter.paintLine(Model.simple_slope)
             // update the view with this same value
             View.updateSlopeRange(slope)
+        })
+    },
+
+    initSimpleIntPainter() {
+        let canvas = document.getElementById('intCanvas')
+        let test_painter = new Painter(canvas)
+        Model.simple_y_int = new Line(1, 0)
+        test_painter.paintLine(Model.simple_y_int)
+        console.log(test_painter)
+
+        // listen for changes on "slopeControl"
+        document.getElementById('intControl').addEventListener('input', (e) => {
+            let y_int = Number(e.target.value)  / this.y_int_input_ratio
+            Model.simple_y_int.setIntercept(y_int)
+            test_painter.paintLine(Model.simple_y_int)
+            // update the view with this same value
+            View.updateIntRange(y_int)
         })
     }
 }
