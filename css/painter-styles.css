@@ -5,4 +5,26 @@
 
     /* TEMP */
     border: 2px solid red;
+    position:relative;
+}
+
+.canvas-container .canvas-controls {
+    font-size: 1.5em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display:flex;
+    flex-direction: column;
+    padding:1em;
+}
+
+.canvas-container .canvas-controls label {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:500px) {
+    .canvas-container .canvas-controls {
+        position: relative;
+    }
 }

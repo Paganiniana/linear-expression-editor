@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linear Formula Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/page.css">
     <link rel="stylesheet" href="./css/painter-styles.css">
     <link rel="stylesheet" href="./css/content-specific-style.css">
@@ -31,12 +34,15 @@
             <div class="page-text">
                 <p>Let's look and see what happens when we change the slope by substituting values for <i>m</i>!</p>
             </div>
+            <div class = "demo-formula"><i>y = <span id="slopeValue">1</span>x + 0</i></div>
             <div class="canvas-container">
                 <canvas id = "slopeCanvas"></canvas>
-            </div>
-            <div class = "demo-formula"><i>y = <span id="slopeValue">1</span>x + 0</i></div>
-            <div class="canvas-controls">
-                <input type="range" min="0" max="100" value="10" name="slope-control" id="slopeControl">
+                <div class="canvas-controls">
+                    <label>
+                        Slope
+                        <input type="range" min="0" max="100" value="10" name="slope-control" id="slopeControl">
+                    </label>
+                </div>
             </div>
             <div class="page-control">
                 <button class="page-control-button button-back">Back</button>
@@ -46,16 +52,20 @@
         <div class="page page-flip-center-right" id="page3">
             <h1>Y-Intercept</h1>
             <div class="page-text">
-                <p>This is the page where we would create another canvas where the user can change the y-intercept.</p>
+                <p>Now let's look and see what happens when we change the slope by substituting values for <i>b</i>!</p>
             </div>
+            <div class = "demo-formula"><i>y = x + <span id="intValue">0</span></i></div>
+
             <div class="canvas-container">
                 <canvas id="intCanvas"></canvas>
+                <div class="canvas-controls">
+                    <label>
+                        Y-Intercept
+                        <input type="range" min="0" max="100" value="0" name="slope-control" id="intControl">
+                    </label>
+                </div>
             </div>
-            <p>Now let's look and see what happens when we change the slope by substituting values for <i>b</i>!</p>
-            <div class = "demo-formula"><i>y = x + <span id="intValue">0</span></i></div>
-            <div class="canvas-controls">
-                <input type="range" min="0" max="100" value="0" name="slope-control" id="intControl">
-            </div>
+    
             <div class="page-control">
                 <button class="page-control-button button-back">Back</button>
                 <button class="page-control-button button-forward">Next</button>
@@ -66,21 +76,19 @@
             <div class="page-text">
                 <p>Now let's look and see what happens when we change <i>m</i> and <i>b</i>!</p>
             </div>
+            <div class = "demo-formula"><i>y = <span id ="comboSlopeValue">1</span> x + <span id="comboIntValue">0</span></i></div>
             <div class="canvas-container">
                 <canvas id="comboCanvas"></canvas>
-            </div>
-            <div class = "demo-formula"><i>y = <span id ="comboSlopeValue">1</span> x + <span id="comboIntValue">0</span></i></div>
-            <div class="canvas-controls">
-                <label>
-                    Y-Intercept
-                    <input type="range" min="0" max="100" value="0" name="slope-control" id="comboControlInt">
-                </label>
-            </div>
-            <div class="canvas-controls">
-                <label>
-                    Slope
-                    <input type="range" min="0" max="100" value="0" name="slope-control" id="comboControlSlope">
-                </label>
+                <div class="canvas-controls">
+                    <label>
+                        Y-Intercept
+                        <input type="range" min="0" max="100" value="0" name="slope-control" id="comboControlInt">
+                    </label>
+                    <label>
+                        Slope
+                        <input type="range" min="0" max="100" value="0" name="slope-control" id="comboControlSlope">
+                    </label>
+                </div>
             </div>
             <div class="page-control">
                 <button class="page-control-button button-back">Back</button>
