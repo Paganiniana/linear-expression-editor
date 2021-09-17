@@ -98,11 +98,18 @@ class Painter {
         // x lines
         console.log('Printing x lines')
         let lim = this.canvas.height
-        for (let i = 0; i <lim; i += this.scale) {
+        for (let i = 0; i <(lim / this.scale); i += 1) {
             this.ctx.strokeStyle = 'rgba(100, 100, 150, 0.5)'
             this.ctx.beginPath()
-            this.ctx.moveTo(0,i)
-            this.ctx.lineTo((this.canvas.width - 2), i)
+            let start_x = this.getGridX(0)
+            let start_y = this.getGridY(i)
+            let end_x = this.getGridX((this.canvas.width / this.scale))
+            // debugger
+            let end_y = this.getGridY(i)
+            this.ctx.moveTo(start_x, start_y)
+            this.ctx.lineTo(end_x, end_y)
+            // this.ctx.moveTo(0,i)
+            // this.ctx.lineTo((this.canvas.width - 2), i)
             this.ctx.stroke()
         }
 

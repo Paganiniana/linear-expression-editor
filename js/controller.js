@@ -1,6 +1,6 @@
 var Controller = {
     // constants
-
+    slope_input_ratio: 10,
 
     /* METHODS */
 
@@ -53,7 +53,7 @@ var Controller = {
 
         // listen for changes on "slopeControl"
         document.getElementById('slopeControl').addEventListener('input', (e) => {
-            let slope = Number(e.target.value) 
+            let slope = Number(e.target.value)  / this.slope_input_ratio
             l.setSlope(slope)
             test_painter.paintLine(l)
             // update the view with this same value
